@@ -1,2 +1,4 @@
 .terraform/
 lambda/*.zip
+*.pdf
+*.html
