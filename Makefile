@@ -9,14 +9,14 @@ help:
 	@echo "  make simulate   Trigger a manual incident simulation"
 
 build:
-	@echo "📦 Packaging Lambda remediator..."
+	@echo " Packaging Lambda remediator..."
 	@cd lambda && zip remediator.zip remediator.py
-	@echo "✅ Build complete: lambda/remediator.zip"
+	@echo "[SUCCESS] Build complete: lambda/remediator.zip"
 
 plan:
-	@echo "🛠️ Running Terraform plan..."
+	@echo "[SETUP] Running Terraform plan..."
 	@cd terraform && terraform init -backend=false && terraform plan
 
 simulate:
-	@echo "🚀 Simulating production incident..."
+	@echo "[START] Simulating production incident..."
 	@python3 scripts/simulate_incident.py
